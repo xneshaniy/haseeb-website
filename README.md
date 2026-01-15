@@ -1,122 +1,95 @@
-# Growth Leder Website - Deployment Guide
+# Growth Leder Website
 
-## How to Go Live (Deploy Your Website)
+A modern, responsive website for Growth Leder - a service-based company specializing in lead generation, virtual assistance, outreach services, CRM management, and automation workflows.
 
-### Option 1: GitHub Pages (FREE & EASY) ⭐ Recommended
+## Features
 
-1. **Create a GitHub Account** (if you don't have one)
-   - Go to https://github.com
-   - Sign up for free
+- ✅ Built with Next.js 14 and React
+- ✅ Styled with Tailwind CSS
+- ✅ Fully responsive design
+- ✅ SEO optimized
+- ✅ Smooth animations and hover effects
+- ✅ Service carousel/slider
+- ✅ Professional SVG icons (no emojis)
+- ✅ Performance optimized
 
-2. **Create a New Repository**
-   - Click "New" or "+" → "New repository"
-   - Name it: `growthleder-website` (or any name)
-   - Make it **Public**
-   - Don't initialize with README
-   - Click "Create repository"
+## Getting Started
 
-3. **Upload Your Files**
-   - Open your `haseeb-services-website` folder
-   - Drag and drop ALL files into the GitHub repository
-   - Or use Git commands:
-     ```bash
-     cd haseeb-services-website
-     git init
-     git add .
-     git commit -m "Initial commit"
-     git branch -M main
-     git remote add origin https://github.com/YOUR-USERNAME/growthleder-website.git
-     git push -u origin main
-     ```
+### Prerequisites
 
-4. **Enable GitHub Pages**
-   - Go to your repository on GitHub
-   - Click **Settings** tab
-   - Scroll to **Pages** section (left sidebar)
-   - Under "Source", select **main** branch
-   - Click **Save**
-   - Your site will be live at: `https://YOUR-USERNAME.github.io/growthleder-website/`
+- Node.js 18+ installed
+- npm or yarn package manager
 
----
+### Installation
 
-### Option 2: Netlify (FREE & EASY) ⭐ Also Recommended
-
-1. **Go to Netlify**
-   - Visit https://www.netlify.com
-   - Sign up for free (can use GitHub account)
-
-2. **Deploy**
-   - Drag and drop your `haseeb-services-website` folder onto Netlify
-   - Or connect to GitHub for automatic deployments
-   - Your site will be live instantly with a free `.netlify.app` domain
-
-3. **Custom Domain** (Optional)
-   - Add your own domain in Netlify settings
-   - Update DNS records as instructed
-
----
-
-### Option 3: Vercel (FREE & EASY)
-
-1. **Go to Vercel**
-   - Visit https://vercel.com
-   - Sign up for free
-
-2. **Deploy**
-   - Import your project from GitHub
-   - Or drag and drop your folder
-   - Site goes live automatically
-
----
-
-### Option 4: Traditional Web Hosting
-
-If you have web hosting (cPanel, FTP, etc.):
-
-1. **Upload Files via FTP**
-   - Use FileZilla or similar FTP client
-   - Upload all files from `haseeb-services-website` folder
-   - Upload to `public_html` or `www` folder
-
-2. **Access Your Site**
-   - Your site will be at: `http://yourdomain.com`
-
----
-
-## Quick Checklist Before Going Live
-
-- [ ] Update Formspree endpoint in `contact.html` (replace `your-form-id`)
-- [ ] Verify all social media links are correct
-- [ ] Test all pages and links
-- [ ] Check mobile responsiveness
-- [ ] Test contact form
-
----
-
-## Need Help?
-
-- **GitHub Pages**: https://pages.github.com
-- **Netlify**: https://docs.netlify.com
-- **Vercel**: https://vercel.com/docs
-
----
-
-## File Structure
-
-```
-haseeb-services-website/
-├── index.html
-├── accounting.html
-├── lead-generation.html
-├── seo-services.html
-├── linkedin-outreach.html
-├── web-outreach.html
-├── contact.html
-├── style.css
-├── script.js
-├── logo.svg
-├── logo-white.svg
-└── favicon.svg
+1. Install dependencies:
+```bash
+npm install
+# or
+yarn install
 ```
 
-All files should be in the same folder when deploying!
+2. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Building for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Project Structure
+
+```
+├── app/
+│   ├── about/          # About Us page
+│   ├── services/       # Services page
+│   ├── portfolio/      # Portfolio page
+│   ├── contact/        # Contact page
+│   ├── automation/    # Automation services page
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Home page
+│   └── globals.css     # Global styles
+├── components/
+│   ├── Header.tsx      # Navigation header
+│   ├── Footer.tsx      # Footer component
+│   ├── ServiceCarousel.tsx  # Services slider
+│   ├── BackToTop.tsx   # Back to top button
+│   └── icons.tsx       # SVG icon components
+├── public/             # Static assets
+└── package.json        # Dependencies
+```
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Deploy automatically
+
+### Other Platforms
+
+This Next.js app can be deployed to:
+- Netlify
+- AWS Amplify
+- Any platform that supports Node.js
+
+## Technologies Used
+
+- **Next.js 14** - React framework
+- **React 18** - UI library
+- **Tailwind CSS** - Styling
+- **TypeScript** - Type safety
+- **Framer Motion** - Animations (if needed)
+
+## Contact
+
+For questions or support, contact: admin@growthleder.com
